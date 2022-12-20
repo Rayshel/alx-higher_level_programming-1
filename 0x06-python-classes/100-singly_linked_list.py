@@ -40,11 +40,11 @@ class Node():
         self.__next_node = NodeValue
 
 
-    class SinglyLinkedList():
-        """Class SinglyLinkedList"""
-        def __init__(self):
-            """Initialization of SinglyLinkedList"""
-            self.__head = None
+class SinglyLinkedList():
+    """Class SinglyLinkedList"""
+    def __init__(self):
+        """Initialization of SinglyLinkedList"""
+        self.__head = None
 
     def sorted_insert(self, DataValue):
         """Inserts a nodes"""
@@ -64,8 +64,8 @@ class Node():
             else:
                 actual.next_node = NewNode
                 return
-            prev.next_node = NewNode
-            NewNode.next_node = actual
+        prev.next_node = NewNode
+        NewNode.next_node = actual
 
     def __str__(self):
         """Class As a String"""
@@ -74,4 +74,4 @@ class Node():
         while actual:
             strg += str(actual.data) + "\n"
             actual = actual.next_node
-            return strg[:-1]
+        return strg[:-1]
