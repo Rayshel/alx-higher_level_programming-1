@@ -1,27 +1,18 @@
 #!/usr/bin/python3
-"""
-Contains BaseGeometry
-with public instance method area and integer_validation
-"""
+"""Defines a base geometry class BaseGeometry"""
 
 
 class BaseGeometry:
-    """
-    Methods:
-        area(self)
-        integer_validator(self, name, value)
-    """
+    """this class represents a base geometry"""
+
     def area(self):
-        """not implemented"""
+        """method not implemented yet"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """validates input
-        Args:
-            name (str): assumed always a string
-            value (int): greater than 0
+        """validates a value as an integer
         """
-        if not isinstance(value, int):
-            raise TypeError("{:s} must be an integer".format(name))
+        if type(value) != int:
+            raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            raise ValueError("{:s} must be greater than 0".format(name))
+            raise ValueError("{} must be greater than 0".format(name))
