@@ -582,6 +582,7 @@ class TestRectangle_update_args(unittest.TestCase):
         r.update(None)
         correct = "[Rectangle] ({}) 10/10 - 10/10".format(r.id)
         self.assertEqual(correct, str(r))
+        
     def test_update_args_None_id_and_more(self):
         r = Rectangle(10, 10, 10, 10, 10)
         r.update(None, 4, 5, 2)
@@ -709,6 +710,7 @@ class TestRectangle_update_kwargs(unittest.TestCase):
         r.update(id=None)
         correct = "[Rectangle] ({}) 10/10 - 10/10".format(r.id)
         self.assertEqual(correct, str(r))
+        
     def test_update_kwargs_None_id_and_more(self):
         r = Rectangle(10, 10, 10, 10, 10)
         r.update(id=None, height=7, y=9)
